@@ -1,0 +1,38 @@
+#frame-component {
+  width: 50vw;
+  height: fit-content;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  /*debug*/
+  border: 1px solid black;
+}
+
+  #frame-component-title {
+
+  }
+
+
+
+#frame-component-list {
+  width: fit-content;
+  height: fit-content;
+
+  /*debug*/
+  border: 1px solid black;
+}
+
+.frame-component-list-card {
+  width: 40vw;
+
+  margin-left: 0em;
+  margin-right: 0em;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+
+  /*debug*/
+  border: 1px solid black;
+}

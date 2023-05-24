@@ -1,0 +1,32 @@
+<mat-card id="create">
+  <div id="frame-title">
+    <span>
+      Create a opinion
+    </span>
+  </div>
+  <div id="columns">
+    <!--  Primeira coluna -->
+    <div class="first-col">
+      <mat-form-field class="example-full-width">
+        <mat-label>Título</mat-label>
+        <input [(ngModel)]="post.title" matInput >
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Jogo</mat-label>
+        <input [(ngModel)]="post.gameName" matInput placeholder="Ex. DARK SOULS">
+      </mat-form-field>
+    </div>
+
+    <!-- Segunda Coluna -->
+    <div class="second-col">
+      <mat-form-field class="long-text">
+        <mat-label>E la vamos nós...</mat-label>
+        <textarea [(ngModel)]="post.text" matInput rows="8" cols="100"></textarea>
+      </mat-form-field>
+      <button mat-raised-button color="primary" (click)="createNewPost()">Create</button>
+    </div>
+
+  </div>
+
+</mat-card>

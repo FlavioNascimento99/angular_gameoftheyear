@@ -1,0 +1,51 @@
+{
+  "users": [
+    {
+      "id":  1,
+      "user": "flavio",
+      "username": "that_damn_flavio",
+      "pw": "123"
+    },
+    {
+      "id":  2,
+      "user": "savio",
+      "username": "boi_de_briga",
+      "pw": "123"
+    },
+    {
+      "id":  3,
+      "user": "chad",
+      "username": "chad_comedor",
+      "pw": "123"
+    }
+  ],
+
+
+  "games": [
+    {
+      "title": "The Witcher 3: Wild Hunt",
+      "developer": "CD Projekt Red",
+      "year": 2015,
+      "genre": "RPG"
+    },
+    {
+      "title": "Grand Theft Auto V",
+      "developer": "Rockstar North",
+      "year": 2013,
+      "genre": "Ação"
+    },
+    {
+      "title": "The Legend of Zelda: Breath of the Wild",
+      "developer": "Nintendo",
+      "year": 2017,
+      "genre": "Aventura"
+    },
+    {
+      "title": "FIFA 21",
+      "developer": "EA Vancouver",
+      "year": 2020,
+      "genre": "Esportes"
+    }
+  ]
+}
+

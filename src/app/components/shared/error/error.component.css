@@ -1,0 +1,10 @@
+#error-container {
+  width: 40vw;
+  display: flex;
+  align-items: center;
+  padding: 1em;
+}
+
+img {
+  height: 10em;
+}

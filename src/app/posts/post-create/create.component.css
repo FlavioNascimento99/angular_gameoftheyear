@@ -1,0 +1,53 @@
+#create {
+  border: 1px solid rebeccapurple;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: rebeccapurple;
+
+}
+
+#frame-title {
+  margin: 1em;
+
+  font-weight: lighter;
+  font-size: 45px;
+}
+
+
+#columns {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 60vw;
+  height: 40vh;
+  padding: 0.5em;
+}
+
+.first-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 40vh;
+  width: 30vw;
+
+  /*Debug*/
+  /*border: 1px solid black;*/
+}
+
+.second-col {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 1em;
+
+  /*Debug*/
+  /*border: 1px solid gold;*/
+}
+.long-text {
+  width: 25vw;
+  height: 20vh;
+}

@@ -9,39 +9,35 @@ import {Posts} from "../../shared/model/posts";
   styleUrls: ['./list.component.css']
 })
 export class ListComponent {
-  postsSpread: Array<Post> = [];
-
-
-
-  editingPost: any;
-  isEditing: boolean = false;
 
   posts = Posts;
 
-  constructor() {
-    this.postsSpread = [...this.posts];
+  itemListEdit(post: Post): void {
+    // Aqui você pode executar alguma lógica adicional antes de salvar as alterações
+    console.log('Editando post:', post);
+
+    // Salvar as alterações (opcional)
+    const indxPostToEdit = this.posts.findIndex(u => u.postId === post.postId);
+    if (indxPostToEdit > -1) {
+      this.posts[indxPostToEdit] = post;
+    }
   }
 
-  itemListEdit(post: any) {
-    this.editingPost = { ...post};
-    this.isEditing = true;
+  toggleEdit(post: Post): void {
+    post.isEditing = !post.isEditing;
   }
 
-  savePost() {
-    this.isEditing = false;
-    this.editingPost = null;
-  }
-
-  cancelEdit() {
-    this.isEditing = false;
-    this.editingPost = null;
-  }
-
+  // itemListRemove(post: Post): void {
+  //   const indxPostToRemove = this.posts.findIndex(u => u.postId === post.postId);
+  //   if (indxPostToRemove > -1) {
+  //     this.posts.splice(indxPostToRemove, 1);
+  //   }
+  // }
 
   itemListRemove(post: Post): void {
-    const indxPostToRemove = this.posts.findIndex(u => u.postId === post.postId);
-    if (indxPostToRemove > -1) {
-      this.posts.splice(indxPostToRemove, 1);
+    const index = this.posts.indexOf(post);
+    if (index > -1) {
+      this.posts.splice(index, 1);
     }
   }
 

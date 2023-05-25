@@ -6,33 +6,76 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-
-  /*debug*/
-  border: 1px solid black;
 }
 
-  #frame-component-title {
+.frame-component-title {
+  font-size: 45px;
+  font-weight: lighter;
+  color: rebeccapurple;
+}
 
+
+  .frame-component-list-card-content {
+    max-width: max-content;
+    display: flex;
+    flex-direction: column;
+    margin: 0.5em;
   }
 
-
+  .frame-component-list-card-content-buttons {
+    display: flex;
+    justify-content: space-between;
+    width: 10vw;
+  }
 
 #frame-component-list {
   width: fit-content;
   height: fit-content;
-
-  /*debug*/
-  border: 1px solid black;
 }
 
 .frame-component-list-card {
   width: 40vw;
-
   margin-left: 0em;
   margin-right: 0em;
   margin-top: 0.5em;
   margin-bottom: 0.5em;
 
-  /*debug*/
-  border: 1px solid black;
 }
+
+.frame-component-list-card-editable {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 1em;
+  margin: 1em;
+  border: 3px solid rebeccapurple;
+  border-radius: 5px;
+}
+
+.frame-component-list-card-editable-info {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 1em;
+}
+
+.frame-component-list-card-editable-inputs {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 30vw;
+}
+
+.frame-component-list-card-editable-title {
+  font-size: 20px;
+  color: rebeccapurple;
+  margin: 0.5em;
+}
+
+.frame-component-list-card-editable-sub-title {
+  font-size: 14px;
+  color: grey;
+  font-style: italic;
+}
+

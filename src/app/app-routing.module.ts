@@ -10,9 +10,9 @@ import {SigninComponent} from "./user/user-sign-in/signin.component";
 
 const routes: Routes = [
   {path: '', component: HomeComponent },
-  {path: 'create', component: CreateComponent},
+  {path: 'post-create', component: CreateComponent},
   {path: 'erro', component: ErrorComponent},
-  {path: 'list', component: ListComponent},
+  {path: 'post-list', component: ListComponent},
   {path: 'user-login', component: LoginComponent},
   {path: 'user-sign-in', component: SigninComponent}
 ];

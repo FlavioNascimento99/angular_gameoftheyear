@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import {Post} from "../../shared/model/post";
 import {Posts} from "../../shared/model/posts";
+import {PostService} from "../../shared/services/post.service";
 
 
 @Component({
@@ -9,36 +10,43 @@ import {Posts} from "../../shared/model/posts";
   styleUrls: ['./list.component.css']
 })
 export class ListComponent {
-
   posts = Posts;
 
-  itemListEdit(post: Post): void {
-    // Aqui você pode executar alguma lógica adicional antes de salvar as alterações
-    console.log('Editando post:', post);
+  constructor(private postService: PostService) {
 
-    // Salvar as alterações (opcional)
-    const indxPostToEdit = this.posts.findIndex(u => u.postId === post.postId);
-    if (indxPostToEdit > -1) {
-      this.posts[indxPostToEdit] = post;
-    }
+  }
+
+  ngOnInit() {
+    this.postService.getPosts().subscribe(
+      allPosts => this.posts = allPosts
+    )
+  }
+
+  updatePost(post: Post): void {
+    this.postService.updatePost(post).subscribe(
+      updatedPost => {
+        const index = this.posts.findIndex(p => p.id === updatedPost.id);
+        if (index !== -1) {
+          this.posts[index] = updatedPost;
+          this.toggleEdit(post)
+        }
+      }
+    );
   }
 
   toggleEdit(post: Post): void {
     post.isEditing = !post.isEditing;
   }
 
-  // itemListRemove(post: Post): void {
-  //   const indxPostToRemove = this.posts.findIndex(u => u.postId === post.postId);
-  //   if (indxPostToRemove > -1) {
-  //     this.posts.splice(indxPostToRemove, 1);
-  //   }
-  // }
-
   itemListRemove(post: Post): void {
-    const index = this.posts.indexOf(post);
-    if (index > -1) {
-      this.posts.splice(index, 1);
-    }
+    this.postService.removePost(post.id).subscribe(
+      resp => {
+        const index = this.posts.findIndex(p => p.id === post.id);
+        if (index !== -1) {
+          this.posts.splice(index, 1);
+        }
+      }
+    )
   }
 
 }

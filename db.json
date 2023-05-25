@@ -1,51 +1,46 @@
 {
-  "users": [
+  "posts": [
     {
-      "id":  1,
-      "user": "flavio",
-      "username": "that_damn_flavio",
-      "pw": "123"
+      "title": "Review Dark Souls III",
+      "gameName": "Dark Souls III",
+      "text": "review breve sobre o jogo em questao",
+      "isEditing": false,
+      "id": 1
     },
     {
-      "id":  2,
-      "user": "savio",
-      "username": "boi_de_briga",
-      "pw": "123"
+      "title": "Análise de The Last of Us Part II",
+      "gameName": "The Last of Us Part II",
+      "text": "Uma análise completa do jogo The Last of Us Part II, destacando sua narrativa envolvente e jogabilidade intensa.",
+      "isEditing": false,
+      "id": 2
     },
     {
-      "id":  3,
-      "user": "chad",
-      "username": "chad_comedor",
-      "pw": "123"
-    }
-  ],
-
-
-  "games": [
-    {
-      "title": "The Witcher 3: Wild Hunt",
-      "developer": "CD Projekt Red",
-      "year": 2015,
-      "genre": "RPG"
+      "title": "Guia de Dota 2 para iniciantes",
+      "gameName": "Dota 2",
+      "text": "Um guia abrangente para iniciantes no jogo Dota 2, explicando mecânicas, estratégias e dicas úteis.",
+      "isEditing": false,
+      "id": 3
     },
     {
-      "title": "Grand Theft Auto V",
-      "developer": "Rockstar North",
-      "year": 2013,
-      "genre": "Ação"
+      "title": "Top 10 personagens de Overwatch",
+      "gameName": "Overwatch",
+      "text": "Uma lista dos 10 melhores personagens jogáveis em Overwatch, com suas habilidades e estratégias recomendadas.",
+      "isEditing": false,
+      "id": 4
     },
     {
-      "title": "The Legend of Zelda: Breath of the Wild",
-      "developer": "Nintendo",
-      "year": 2017,
-      "genre": "Aventura"
+      "title": "Preview de Cyberpunk 2077",
+      "gameName": "Cyberpunk 2077",
+      "text": "Um preview emocionante do jogo Cyberpunk 2077, revelando detalhes sobre o mundo aberto e a história envolvente.",
+      "isEditing": false,
+      "id": 5
     },
     {
-      "title": "FIFA 21",
-      "developer": "EA Vancouver",
-      "year": 2020,
-      "genre": "Esportes"
+      "title": "Dicas para vencer no Fortnite",
+      "gameName": "Fortnite",
+      "text": "Dicas e estratégias essenciais para obter a vitória no jogo Battle Royale Fortnite, incluindo construções e combate.",
+      "isEditing": false,
+      "id": 6
     }
   ]
 }
-

@@ -1,6 +1,6 @@
 export class Post {
   public static nextId: number = 1;
-  public postId: number;
+  public id: number;
 
 
   public isEditing: boolean = false;
@@ -8,6 +8,6 @@ export class Post {
               public gameName: string = '',
               public text: string = '',
               ) {
-    this.postId = Post.nextId++;
+    this.id = Post.nextId++;
   }
 }

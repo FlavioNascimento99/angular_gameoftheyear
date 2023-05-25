@@ -1,4 +1,10 @@
-#header-toolbar {
+#frame-header {
+  margin-bottom: 5em;
+}
+
+#frame-header-toolbar {
   display: flex;
   justify-content: space-between;
 }
+
+

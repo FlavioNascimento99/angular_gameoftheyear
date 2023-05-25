@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import {Post} from "../../shared/model/post";
 import {Posts} from "../../shared/model/posts";
+import {PostService} from "../../shared/services/post.service";
 
 @Component({
   selector: 'app-post-create',
@@ -12,16 +13,18 @@ export class CreateComponent {
   post: Post;
   posts: Array<Post>;
 
-  constructor() {
+  constructor(private postService: PostService) {
     this.post = new Post();
     this.posts = Posts;
   }
 
   createNewPost() {
-    this.posts.push(this.post);
-    this.post = new Post();
-
-    console.log(this.posts)
+    this.postService.insertPost(this.post).subscribe(
+      resp => {
+        this.posts.push(this.post);
+        this.post = new Post();
+      }
+    )
   }
 
 }

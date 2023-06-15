@@ -22,6 +22,8 @@ import { SigninComponent } from './user/user-sign-in/signin.component';
 import {FormsModule} from "@angular/forms";
 import {MatListModule} from "@angular/material/list";
 import {PostsModule} from "./posts/posts.module";
+import {MatButtonToggleModule} from "@angular/material/button-toggle";
+import {MatMenuModule} from "@angular/material/menu";
 
 @NgModule({
   declarations: [
@@ -48,7 +50,9 @@ import {PostsModule} from "./posts/posts.module";
         FormsModule,
         MatListModule,
         CommonModule,
-        PostsModule
+        PostsModule,
+        MatButtonToggleModule,
+        MatMenuModule
     ],
   providers: [],
   bootstrap: [AppComponent]

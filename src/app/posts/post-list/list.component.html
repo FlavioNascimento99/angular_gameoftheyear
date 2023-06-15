@@ -17,54 +17,25 @@
         <span>{{post.text}}</span>
       </mat-card-content>
 
-      <div  *ngIf="post.isEditing" class="frame-component-list-card-editable">
 
-        <mat-label class="frame-component-list-card-editable-info" *ngIf="post.isEditing">
-          <span class="frame-component-list-card-editable-title">
-            Editar post
-          </span>
-          <span class="frame-component-list-card-editable-sub-title">
-            Para editar, basta clicar em "Toggle", fazer alterações desejadas e por fim salvá-las clicando em "Save".
-          </span>
-        </mat-label>
-
-        <div class="frame-component-list-card-editable-inputs" *ngIf="post.isEditing">
-          <mat-form-field class="input-editable" appearance="outline"  *ngIf="post.isEditing">
-            <mat-label>Alterar Título</mat-label>
-
-            <input matInput [(ngModel)]="post.title">
-            <mat-icon matSuffix>edit</mat-icon>
-          </mat-form-field>
-
-          <mat-form-field class="input-editable" appearance="outline"  *ngIf="post.isEditing">
-            <mat-label>Alterar Jogo</mat-label>
-
-            <input matInput [(ngModel)]="post.gameName">
-            <mat-icon matSuffix>edit</mat-icon>
-          </mat-form-field>
-
-          <mat-form-field class="input-editable" appearance="outline"  *ngIf="post.isEditing">
-            <mat-label>Alterar</mat-label>
-
-            <input matInput [(ngModel)]="post.text">
-            <mat-icon matSuffix>edit</mat-icon>
-          </mat-form-field>
-
-          <button mat-raised-button color="primary" (click)="updatePost(post)">
-            Save
-          </button>
-
-        </div>
-      </div>
 
       <mat-card-actions>
-        <div class="frame-component-list-card-content-buttons">
-          <button mat-raised-button color="primary" (click)="toggleEdit(this.post)">Toggle
-          <mat-icon>
-            edit
-          </mat-icon>
+
+        <button mat-icon-button [matMenuTriggerFor]="menu">
+          <mat-icon>blur_on</mat-icon>
+        </button>
+        <mat-menu #menu="matMenu">
+
+          <button mat-menu-item color="primary" (click)="itemListRemove(post)">
+            <mat-icon>
+              delete
+            </mat-icon>
+            Delete
           </button>
-          <button mat-raised-button color="primary" (click)="itemListRemove(post)">Delete</button>
+        </mat-menu>
+
+        <div class="frame-component-list-card-content-buttons">
+
         </div>
       </mat-card-actions>
 

@@ -1,13 +1,13 @@
 export class Post {
-  public static nextId: number = 1;
   public id: number;
+  static nextId = 20;
 
-
-  public isEditing: boolean = false;
-  constructor(public title = '',
-              public gameName: string = '',
-              public text: string = '',
-              ) {
-    this.id = Post.nextId++;
+  constructor(
+    public title: string = '',
+    public gameName: string = '',
+    public text: string = '',
+  ) {
+    this.id = Post.nextId;
+    Post.nextId++
   }
 }

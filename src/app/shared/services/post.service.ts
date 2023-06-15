@@ -19,11 +19,6 @@ export class PostService {
     return this.httpClient.post<Post>(this.URL_POSTS, post)
   }
 
-  updatePost(post: Post): Observable<Post> {
-    const url = `${this.URL_POSTS}/${post.id}`;
-    return this.httpClient.put<Post>(url, post);
-  }
-
 
   removePost(id: number):Observable<object>{
     return this.httpClient.delete(`${this.URL_POSTS}/${id}`)

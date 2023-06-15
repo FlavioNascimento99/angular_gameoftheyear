@@ -7,6 +7,7 @@ import {ErrorComponent} from "./components/shared/error/error.component";
 import {ListComponent} from "./posts/post-list/list.component";
 import {LoginComponent} from "./user/user-login/login.component";
 import {SigninComponent} from "./user/user-sign-in/signin.component";
+import {ProfileComponent} from "./user/user-profile/profile.component";
 
 const routes: Routes = [
   {path: '', component: HomeComponent },
@@ -14,7 +15,8 @@ const routes: Routes = [
   {path: 'erro', component: ErrorComponent},
   {path: 'post-list', component: ListComponent},
   {path: 'user-login', component: LoginComponent},
-  {path: 'user-sign-in', component: SigninComponent}
+  {path: 'user-sign-in', component: SigninComponent},
+  {path: 'user-profile', component: ProfileComponent}
 ];
 
 @NgModule({

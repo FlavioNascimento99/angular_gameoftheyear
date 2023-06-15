@@ -6,27 +6,27 @@
   </div>
   <div class="sign-in-frame-field">
     <mat-form-field appearance="outline">
-      <mat-label>Name</mat-label>
-      <input matInput>
+      <mat-label>Full Name</mat-label>
+      <input matInput [(ngModel)]="user.fullName" (input)="onInputChange()">
     </mat-form-field>
   </div>
 
     <div class="sign-in-frame-field">
       <mat-form-field appearance="outline">
-        <mat-label>Login</mat-label>
-        <input matInput>
+        <mat-label>Username</mat-label>
+        <input matInput [(ngModel)]="user.userName" (input)="onInputChange()">
       </mat-form-field>
     </div>
 
   <div class="sign-in-frame-field">
     <mat-form-field appearance="outline">
       <mat-label>Password</mat-label>
-      <input matInput>
+      <input matInput [(ngModel)]="user.passWord">
     </mat-form-field>
   </div>
 
   <div class="sign-in-frame-button">
-    <button mat-raised-button color="fill" routerLink="/erro">
+    <button mat-raised-button color="fill" (click)="createAccount()">
       Sign In
     </button>
   </div>

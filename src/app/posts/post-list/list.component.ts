@@ -22,22 +22,6 @@ export class ListComponent {
     )
   }
 
-  updatePost(post: Post): void {
-    this.postService.updatePost(post).subscribe(
-      updatedPost => {
-        const index = this.posts.findIndex(p => p.id === updatedPost.id);
-        if (index !== -1) {
-          this.posts[index] = updatedPost;
-          this.toggleEdit(post)
-        }
-      }
-    );
-  }
-
-  toggleEdit(post: Post): void {
-    post.isEditing = !post.isEditing;
-  }
-
   itemListRemove(post: Post): void {
     this.postService.removePost(post.id).subscribe(
       resp => {

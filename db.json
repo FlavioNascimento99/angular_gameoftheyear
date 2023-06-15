@@ -1,46 +1,29 @@
 {
-  "posts": [
+  "users": [
     {
-      "title": "Review Dark Souls III",
-      "gameName": "Dark Souls III",
-      "text": "review breve sobre o jogo em questao",
-      "isEditing": false,
-      "id": 1
-    },
+      "fullName": "Flavio Nascimento",
+      "userName": "that_damn_flavio",
+      "passWord": "senha"
+    }
+  ],
+  "posts": [
     {
       "title": "Análise de The Last of Us Part II",
       "gameName": "The Last of Us Part II",
       "text": "Uma análise completa do jogo The Last of Us Part II, destacando sua narrativa envolvente e jogabilidade intensa.",
-      "isEditing": false,
       "id": 2
-    },
-    {
-      "title": "Guia de Dota 2 para iniciantes",
-      "gameName": "Dota 2",
-      "text": "Um guia abrangente para iniciantes no jogo Dota 2, explicando mecânicas, estratégias e dicas úteis.",
-      "isEditing": false,
-      "id": 3
     },
     {
       "title": "Top 10 personagens de Overwatch",
       "gameName": "Overwatch",
       "text": "Uma lista dos 10 melhores personagens jogáveis em Overwatch, com suas habilidades e estratégias recomendadas.",
-      "isEditing": false,
       "id": 4
     },
     {
       "title": "Preview de Cyberpunk 2077",
       "gameName": "Cyberpunk 2077",
       "text": "Um preview emocionante do jogo Cyberpunk 2077, revelando detalhes sobre o mundo aberto e a história envolvente.",
-      "isEditing": false,
       "id": 5
-    },
-    {
-      "title": "Dicas para vencer no Fortnite",
-      "gameName": "Fortnite",
-      "text": "Dicas e estratégias essenciais para obter a vitória no jogo Battle Royale Fortnite, incluindo construções e combate.",
-      "isEditing": false,
-      "id": 6
     }
   ]
 }

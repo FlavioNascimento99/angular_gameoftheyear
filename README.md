@@ -3,13 +3,13 @@ Se trata de um projeto semelhante à já conceituada comunidade "album of the ye
 
 ---
 ## Funcionalidades Implementadas
-- Sistema de adição de publicações
+- Sistema de (CRUD) de publicações
     - Sendo este, alimentado com o seu nome (alterável a cada nova publicação).
     - Um título para a mesma.
     - O título que está sendo debatido.
     - Por fim um campo de texto, com um limite de até 480 caracteres, afim de tornar o uso da aplicação, algo mais dinâmico possível.
 
-## Funcionalidades a implementar
+## Funcionalidades a implementar (Não necessários para entrega letiva do projeto)
 - Sistema de login
     - Possivelmente utilizando do Google Auth.
 - Área de interação dentro das publicações.

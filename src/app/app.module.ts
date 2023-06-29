@@ -5,54 +5,54 @@ import { CommonModule } from '@angular/common';
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import { HeaderComponent } from './components/shared/header/header.component';
+import { CreateComponent } from './components/posts/create/create.component';
+import { HomeComponent } from './components/home/home.component';
+import { ListComponent } from './components/posts/feed/list.component';
+import { FormsModule } from "@angular/forms";
+import { PostsModule } from "./components/posts/posts.module";
+
+import { MatButtonToggleModule } from "@angular/material/button-toggle";
+import { MatMenuModule } from "@angular/material/menu";
+import { MatListModule } from "@angular/material/list";
+import { MatInputModule } from "@angular/material/input";
+import { MatSelectModule } from "@angular/material/select";
+import { MatCardModule } from "@angular/material/card";
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatToolbarModule } from '@angular/material/toolbar';
-import { HeaderComponent } from './components/shared/header/header.component';
-import { ProfileComponent } from './user/user-profile/profile.component';
-import { LoginComponent } from './user/user-login/login.component';
-import { ErrorComponent } from './components/shared/error/error.component';
-import { MatCardModule } from "@angular/material/card";
-import { CreateComponent } from './posts/post-create/create.component';
-import { MatInputModule} from "@angular/material/input";
-import { MatSelectModule} from "@angular/material/select";
-import { HomeComponent } from './components/frames/home/home.component';
-import { ListComponent } from './posts/post-list/list.component';
-import { SigninComponent } from './user/user-sign-in/signin.component';
-import {FormsModule} from "@angular/forms";
-import {MatListModule} from "@angular/material/list";
-import {PostsModule} from "./posts/posts.module";
-import {MatButtonToggleModule} from "@angular/material/button-toggle";
-import {MatMenuModule} from "@angular/material/menu";
+
+import {AngularFireModule} from "@angular/fire/compat";
+import {AngularFirestoreModule} from "@angular/fire/compat/firestore";
+import {firebaseConfig} from "../firebase.config";
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    ProfileComponent,
-    LoginComponent,
-    ErrorComponent,
     CreateComponent,
     HomeComponent,
     ListComponent,
-    SigninComponent
   ],
     imports: [
-        BrowserModule,
-        BrowserAnimationsModule,
-        MatToolbarModule,
-        MatButtonModule,
-        MatIconModule,
-        MatCardModule,
-        MatInputModule,
-        MatSelectModule,
-        AppRoutingModule,
-        FormsModule,
-        MatListModule,
-        CommonModule,
-        PostsModule,
-        MatButtonToggleModule,
-        MatMenuModule
+      AngularFireModule.initializeApp(firebaseConfig),
+      AngularFirestoreModule,
+      BrowserModule,
+      BrowserAnimationsModule,
+      MatToolbarModule,
+      MatButtonModule,
+      MatIconModule,
+      MatCardModule,
+      MatInputModule,
+      MatSelectModule,
+      AppRoutingModule,
+      FormsModule,
+      MatListModule,
+      CommonModule,
+      PostsModule,
+      MatButtonToggleModule,
+      MatMenuModule
     ],
   providers: [],
   bootstrap: [AppComponent]

@@ -15,7 +15,7 @@ describe('HeaderDefaultComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should post-create', () => {
+  it('should create', () => {
     expect(component).toBeTruthy();
   });
 });

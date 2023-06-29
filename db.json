@@ -8,19 +8,19 @@
   ],
   "posts": [
     {
-      "title": "Análise de The Last of Us Part II",
+      "title": "Análise de The Last of Us Part II - Json Server",
       "gameName": "The Last of Us Part II",
       "text": "Uma análise completa do jogo The Last of Us Part II, destacando sua narrativa envolvente e jogabilidade intensa.",
       "id": 2
     },
     {
-      "title": "Top 10 personagens de Overwatch",
+      "title": "Top 10 personagens de Overwatch - Json Server",
       "gameName": "Overwatch",
       "text": "Uma lista dos 10 melhores personagens jogáveis em Overwatch, com suas habilidades e estratégias recomendadas.",
       "id": 4
     },
     {
-      "title": "Preview de Cyberpunk 2077",
+      "title": "Preview de Cyberpunk 2077 - Json Server",
       "gameName": "Cyberpunk 2077",
       "text": "Um preview emocionante do jogo Cyberpunk 2077, revelando detalhes sobre o mundo aberto e a história envolvente.",
       "id": 5

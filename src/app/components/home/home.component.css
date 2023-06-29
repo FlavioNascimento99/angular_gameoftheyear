@@ -3,6 +3,9 @@
 
   width: 80vw;
   height: 75vh;
+
+  border: 2px solid rebeccapurple;
+
 }
 
 /*Lado esquerdo do componente principal*/
@@ -11,8 +14,6 @@
 
   display: flex;
   flex-direction: column;
-
-  border: 1px solid greenyellow;
 }
 
   .main-left-column-text {
@@ -46,14 +47,6 @@
 /*Lado direito do componente principal*/
 .main-right-column {
   width: 40%;
-
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(4, 1fr);
-
-  overflow-y: clip;
-
-  border: 1px solid gold;
 }
 
 .cover {

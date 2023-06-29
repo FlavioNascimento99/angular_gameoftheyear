@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import {User} from "../../../shared/model/user";
 
 @Component({
   selector: 'app-header',

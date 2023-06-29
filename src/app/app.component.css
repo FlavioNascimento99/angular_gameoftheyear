@@ -1,5 +1,9 @@
 .main {
-  height: 80%;
+
   display: flex;
   justify-content: center;
+
+  height: 100%;
+
 }
+

@@ -1,13 +1,12 @@
 export class Post {
 
-  id?: number;
-
+  id?: string;
   title = '';
   theme = '';
   commentary = '';
 
   constructor (
-    id?: number,
+    id?: string,
     post: Post = {
       title: '',
       theme: '',

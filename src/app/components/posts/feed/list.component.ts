@@ -1,8 +1,6 @@
-import { Component } from '@angular/core';
-import {Post} from "../../../model/post";
-import {PostFirestoreService} from "../../../services/post-firestore.service";
-import {PostService} from "../../../services/post.service";
-import {Observable} from "rxjs";
+import {Component, OnInit} from '@angular/core';
+import { Post } from "../../../model/post";
+import { PostService } from "../../../services/post.service";
 
 
 @Component({
@@ -10,34 +8,30 @@ import {Observable} from "rxjs";
   templateUrl: './list.component.html',
   styleUrls: ['./list.component.css']
 })
-export class ListComponent {
+export class ListComponent implements OnInit{
 
-  // ItemPost: any[] = [];
-  posts: Observable<Post[]>;
+  posts: Post[];
 
   constructor(private postService: PostService) {
-    this.posts = postService.getPosts();
+    this.posts = new Array<Post>();
   }
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.postService.getPosts().subscribe(
-      itens => {
-        // this.posts = itens;                  <------------ To-do
-      },
+      posts => this.posts = posts
     )
   }
 
-  itemListRemove(post: Post): void {
-
-    if (post && post.id) {
-      this.postService.removePost(post.id).subscribe(
-        () => {
-
-        },
-        error => {
-          console.error('Ocorreu um erro ao excluir o post:', error);
+  itemListRemove(toRemovePost: Post): void {
+    const id = toRemovePost.id || '';
+    this.postService.removePost(id).subscribe(
+      removed => {
+        console.log(removed);
+        const postIndex = this.posts.findIndex(p => p.id === toRemovePost.id);
+        if (postIndex > -1){
+          this.posts.splice(postIndex, 1)
         }
-      );
-    }
+      }
+    )
   }
 }

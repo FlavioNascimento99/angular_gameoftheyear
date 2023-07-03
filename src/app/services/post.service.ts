@@ -8,9 +8,11 @@ import { Post } from "../model/post";
 })
 
 export class PostService {
-  constructor(private httpClient: HttpClient) { }
 
   private URL_POSTS = "http://localhost:8080/posts";
+  constructor(private httpClient: HttpClient) {
+
+  }
 
   getPosts(): Observable<Post[]> {
     return this.httpClient.get<Post[]>(this.URL_POSTS);

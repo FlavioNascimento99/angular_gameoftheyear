@@ -5,6 +5,10 @@
     </span>
   </div>
 
+  <p>
+    <mat-icon [matBadge]="posts.length" matBadgeColor="primary">group</mat-icon>
+  </p>
+|
   <div id="frame-component-list">
     <mat-card *ngFor="let post of posts" class="frame-component-list-card">
 

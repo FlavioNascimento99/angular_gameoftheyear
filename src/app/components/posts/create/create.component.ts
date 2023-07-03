@@ -24,6 +24,7 @@ export class CreateComponent {
   }
 
   onInputChange() {
+    // @ts-ignore
     if (this.post.commentary.length > this.textLength) {
       this.snackBar.open('Limite de caracteres excedido!', 'Fechar', {
         duration: 3000,

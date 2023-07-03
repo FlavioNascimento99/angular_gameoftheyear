@@ -24,7 +24,7 @@
       <mat-form-field class="long-text">
         <mat-label>E la vamos nós...</mat-label>
         <textarea [(ngModel)]="post.commentary" matInput rows="8" cols="100" maxlength="120" (input)="onInputChange()" required></textarea>
-        <mat-hint align="end">{{post.commentary.length}} / 120</mat-hint>
+<!--        <mat-hint align="end">{{post.commentary?.length}} / 120</mat-hint>-->
 
       </mat-form-field>
       <button mat-raised-button color="primary" (click)="createNewPost()" routerLink="/post-list">Create</button>

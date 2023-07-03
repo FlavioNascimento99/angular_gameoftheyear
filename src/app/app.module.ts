@@ -26,6 +26,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import {AngularFireModule} from "@angular/fire/compat";
 import {AngularFirestoreModule} from "@angular/fire/compat/firestore";
 import {firebaseConfig} from "../firebase.config";
+import {MatBadgeModule} from "@angular/material/badge";
 
 @NgModule({
   declarations: [
@@ -36,23 +37,24 @@ import {firebaseConfig} from "../firebase.config";
     ListComponent,
   ],
     imports: [
-      AngularFireModule.initializeApp(firebaseConfig),
-      AngularFirestoreModule,
-      BrowserModule,
-      BrowserAnimationsModule,
-      MatToolbarModule,
-      MatButtonModule,
-      MatIconModule,
-      MatCardModule,
-      MatInputModule,
-      MatSelectModule,
-      AppRoutingModule,
-      FormsModule,
-      MatListModule,
-      CommonModule,
-      PostsModule,
-      MatButtonToggleModule,
-      MatMenuModule
+        AngularFireModule.initializeApp(firebaseConfig),
+        AngularFirestoreModule,
+        BrowserModule,
+        BrowserAnimationsModule,
+        MatToolbarModule,
+        MatButtonModule,
+        MatIconModule,
+        MatCardModule,
+        MatInputModule,
+        MatSelectModule,
+        AppRoutingModule,
+        FormsModule,
+        MatListModule,
+        CommonModule,
+        PostsModule,
+        MatButtonToggleModule,
+        MatMenuModule,
+        MatBadgeModule
     ],
   providers: [],
   bootstrap: [AppComponent]

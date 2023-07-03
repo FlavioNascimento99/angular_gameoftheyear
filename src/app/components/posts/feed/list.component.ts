@@ -8,9 +8,10 @@ import { PostService } from "../../../services/post.service";
   templateUrl: './list.component.html',
   styleUrls: ['./list.component.css']
 })
-export class ListComponent implements OnInit{
+export class ListComponent implements OnInit {
 
   posts: Post[];
+
 
   constructor(private postService: PostService) {
     this.posts = new Array<Post>();
@@ -18,9 +19,10 @@ export class ListComponent implements OnInit{
 
   ngOnInit(): void {
     this.postService.getPosts().subscribe(
-      posts => this.posts = posts
+      getDamnPosts => this.posts = getDamnPosts
     )
   }
+
 
   itemListRemove(toRemovePost: Post): void {
     const id = toRemovePost.id || '';

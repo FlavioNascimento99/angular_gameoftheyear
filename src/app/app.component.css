@@ -1,9 +1,9 @@
-.main {
-
-  display: flex;
-  justify-content: center;
-
-  height: 100%;
-
+.head {
+  margin-bottom: 2em;
 }
 
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -6,7 +6,6 @@ html, body {
 }
 
 body {
-  overflow: clip;
   margin: 0;
   font-family: 'Montserrat', sans-serif;
 }

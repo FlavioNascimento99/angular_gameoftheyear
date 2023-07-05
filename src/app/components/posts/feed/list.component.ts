@@ -12,21 +12,17 @@ export class ListComponent implements OnInit {
 
   posts: Post[];
 
-
   constructor(private postService: PostService) {
     this.posts = new Array<Post>();
   }
-
   ngOnInit(): void {
-    this.postService.getPosts().subscribe(
+    this.postService.get().subscribe(
       getDamnPosts => this.posts = getDamnPosts
     )
   }
-
-
   itemListRemove(toRemovePost: Post): void {
     const id = toRemovePost.id || '';
-    this.postService.removePost(id).subscribe(
+    this.postService.remove(id).subscribe(
       removed => {
         console.log(removed);
         const postIndex = this.posts.findIndex(p => p.id === toRemovePost.id);

@@ -2,52 +2,57 @@
   display: flex;
 
   width: 80vw;
-  height: 75vh;
 
-  border: 2px solid rebeccapurple;
-
+  /* Debug */
+  /*border: 2px solid rebeccapurple;*/
 }
 
 /*Lado esquerdo do componente principal*/
 .main-left-column {
-  width: 60%;
+  /* Debug */
+  /*border: 1px solid red;*/
+
+  width: 70%;
+  height: 55vh;
 
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
 }
 
   .main-left-column-text {
     width: 100%;
-
     text-align: center;
   }
-
     .main-left-column-h1 {
-      font-size: xxx-large;
-      margin-top: 2em;
-      margin-bottom: 4em;
+      font-size: 100px;
+      margin: 5%;
     }
-
     .main-left-column-sub {
-      font-size: larger;
-
+      font-size: 25px;
     }
 
   .main-left-column-buttons {
     width: 100%;
-
     display: flex;
     justify-content: center;
   }
-
     button {
       margin: 1em;
     }
 
 /*Lado direito do componente principal*/
 .main-right-column {
-  width: 40%;
+  /* Debug */
+  /*border: 1px solid red;*/
+
+  height: 55vh;
+  width: 30%;
 }
+
+  .main-right-column-img {
+    width: 100%;
+  }
 
 .cover {
   width: 100%;

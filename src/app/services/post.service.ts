@@ -14,16 +14,25 @@ export class PostService {
 
   }
 
-  getPosts(): Observable<Post[]> {
+  get(): Observable<Post[]> {
     return this.httpClient.get<Post[]>(this.URL_POSTS);
   }
 
-  insertPost(novoPost: Post):Observable<Post> {
+  insert(novoPost: Post):Observable<Post> {
     return this.httpClient.post<Post>(this.URL_POSTS, novoPost)
   }
 
-  removePost(id: string):Observable<object>{
+  remove(id: string):Observable<object>{
     return this.httpClient.delete(`${this.URL_POSTS}/${id}`)
+  }
+
+  update(post: Post): Observable<Post> {
+    return this.httpClient
+      .put<Post>(`${this.URL_POSTS}/${post.id}`, post);
+  }
+
+  find(id: string): Observable<Post> {
+    return this.httpClient.get<Post>(`${this.URL_POSTS}/${id}`);
   }
 
 }

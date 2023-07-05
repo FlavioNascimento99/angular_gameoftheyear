@@ -1,50 +1,37 @@
-<div id="frame-component" >
+<div class="frame-component" >
   <div class="frame-component-title">
-    <span>
-      Recent Reviews
-    </span>
+    <h1>Recent Reviews</h1>
   </div>
-
-  <p>
-    <mat-icon [matBadge]="posts.length" matBadgeColor="primary">group</mat-icon>
-  </p>
-|
-  <div id="frame-component-list">
+  <div class="frame-component-list">
     <mat-card *ngFor="let post of posts" class="frame-component-list-card">
-
-      <mat-card-header>
-        <mat-card-title>{{post.title}}</mat-card-title>
-        <mat-card-subtitle>{{post.theme}} </mat-card-subtitle>
+      <mat-card-header class="card-header">
+        <div class="card-header-title">
+          <mat-card-title>#{{post.id}} • {{post.title}}</mat-card-title>
+          <mat-card-subtitle>{{post.theme}} </mat-card-subtitle>
+        </div>
+        <div class="card-header-menu">
+          <mat-card-actions>
+            <button mat-icon-button [matMenuTriggerFor]="menu">
+              <mat-icon>more_vert</mat-icon>
+            </button>
+            <mat-menu #menu="matMenu">
+              <button mat-menu-item color="primary" [routerLink]="['/editing', post.id]">
+                <mat-icon>
+                  edit
+                </mat-icon>
+                Edit
+              </button>
+              <button mat-menu-item color="primary" (click)="itemListRemove(post)">
+                <mat-icon>delete</mat-icon>
+                Delete
+              </button>
+            </mat-menu>
+          </mat-card-actions>
+        </div>
       </mat-card-header>
-
       <mat-card-content class="frame-component-list-card-content">
         <span>{{post.commentary}}</span>
       </mat-card-content>
-
-
-
-      <mat-card-actions>
-
-        <button mat-icon-button [matMenuTriggerFor]="menu">
-          <mat-icon>blur_on</mat-icon>
-        </button>
-        <mat-menu #menu="matMenu">
-
-          <button mat-menu-item color="primary" (click)="itemListRemove(post)">
-            <mat-icon>
-              delete
-            </mat-icon>
-            Delete
-          </button>
-        </mat-menu>
-
-        <div class="frame-component-list-card-content-buttons">
-
-        </div>
-      </mat-card-actions>
-
-
-
     </mat-card>
   </div>
 </div>

@@ -5,31 +5,25 @@
     </span>
   </div>
   <div id="columns" >
-
-    <!--  Primeira coluna -->
     <div class="first-col">
       <mat-form-field class="example-full-width">
         <mat-label>Título</mat-label>
         <input [(ngModel)]="post.title" matInput required>
       </mat-form-field>
-
       <mat-form-field>
         <mat-label>Jogo</mat-label>
         <input [(ngModel)]="post.theme" matInput placeholder="Ex. DARK SOULS" required>
       </mat-form-field>
     </div>
-
-    <!-- Segunda Coluna -->
     <div class="second-col">
       <mat-form-field class="long-text">
         <mat-label>E la vamos nós...</mat-label>
         <textarea [(ngModel)]="post.commentary" matInput rows="8" cols="100" maxlength="120" (input)="onInputChange()" required></textarea>
-<!--        <mat-hint align="end">{{post.commentary?.length}} / 120</mat-hint>-->
-
       </mat-form-field>
-      <button mat-raised-button color="primary" (click)="createNewPost()" routerLink="/post-list">Create</button>
     </div>
-
+  </div>
+  <div class="row">
+    <button mat-raised-button color="primary" (click)="createOrUpdatePost()" routerLink="/feed">{{buttonName}}</button>
   </div>
 
 </mat-card>

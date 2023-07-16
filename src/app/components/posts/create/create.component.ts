@@ -3,7 +3,7 @@ import { MatSnackBar } from "@angular/material/snack-bar";
 
 import { Post } from "../../../model/post";
 
-import { PostFirestoreService } from "../../../services/post-firestore.service";
+// import { PostFirestoreService } from "../../../services/post-firestore.service";
 import {PostService} from "../../../services/post.service";
 import {ActivatedRoute} from "@angular/router";
 

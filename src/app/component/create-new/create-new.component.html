@@ -1,0 +1,54 @@
+
+<mat-stepper orientation="vertical" [linear]="isLinear" #stepper>
+  <mat-step [stepControl]="titleFormBuilder">
+    <ng-template matStepLabel>Title</ng-template>
+    <form [formGroup]="titleFormBuilder">
+      <mat-form-field appearance="outline">
+        <mat-label>Title</mat-label>
+        <input matInput formControlName="titleValidator" required>
+      </mat-form-field>
+      <div>
+        <button mat-button matStepperNext>Next</button>
+      </div>
+    </form>
+  </mat-step>
+
+  <mat-step [stepControl]="themeFormBuilder">
+    <ng-template matStepLabel>Theme</ng-template>
+    <form [formGroup]="themeFormBuilder">
+      <mat-form-field appearance="outline">
+        <mat-label>Theme</mat-label>
+        <input matInput formControlName="themeValidator" required>
+      </mat-form-field>
+      <div>
+        <button mat-button matStepperPrevious>Back</button>
+        <button mat-button matStepperNext>Next</button>
+      </div>
+    </form>
+  </mat-step>
+
+  <mat-step [stepControl]='commentaryFormBuilder'>
+    <ng-template matStepLabel>Commentary</ng-template>
+    <form [formGroup]='commentaryFormBuilder'>
+      <mat-form-field appearance="outline">
+        <textarea matInput formControlName='commentaryValidator' required></textarea>
+      </mat-form-field>
+    </form>
+    <div>
+      <button mat-button matStepperPrevious>Back</button>
+      <button mat-button matStepperNext>Next</button>
+    </div>
+  </mat-step>
+
+
+
+  <mat-step>
+    <!--  step title  -->
+    <ng-template matStepLabel>Done</ng-template>
+    <p>Your post are now done.</p>
+    <div>
+      <button mat-button matStepperPrevious>Back</button>
+      <button mat-button (click)="createOrUpdatePost()">Post It!</button>
+    </div>
+  </mat-step>
+</mat-stepper>

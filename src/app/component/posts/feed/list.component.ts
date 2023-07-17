@@ -1,7 +1,7 @@
 import { Post } from "../../../model/post";
 import { PostService } from "../../../service/post.service";
 import { Component, OnInit } from '@angular/core';
-
+import { FirebaseService } from '../../../service/firebase.service';
 
 @Component({
   selector: 'app-feed',
@@ -12,7 +12,7 @@ export class ListComponent implements OnInit {
 
   posts: Post[];
 
-  constructor(private postService: PostService) {
+  constructor(private postService: FirebaseService) {
     this.posts = new Array<Post>();
   }
   ngOnInit(): void {
@@ -22,7 +22,7 @@ export class ListComponent implements OnInit {
   }
   itemListRemove(toRemovePost: Post): void {
     const id = toRemovePost.id || '';
-    this.postService.remove(id).subscribe(
+    this.postService.delete(id).subscribe(
       removed => {
         console.log(removed);
         const postIndex = this.posts.findIndex(p => p.id === toRemovePost.id);

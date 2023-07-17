@@ -26,7 +26,7 @@ import { MatButtonToggleModule } from "@angular/material/button-toggle";
 import { FooterComponent } from './component/footer/footer.component';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatStepperModule } from '@angular/material/stepper';
-import { TesteComponent } from './component/teste/teste.component';
+import { CreateNewComponent } from './component/create-new/create-new.component';
 
 // import {firebaseConfig} from "../firebase.config";
 // import {AngularFireModule} from "@angular/fire/compat";
@@ -40,11 +40,9 @@ import { TesteComponent } from './component/teste/teste.component';
     HomeComponent,
     ListComponent,
     FooterComponent,
-    TesteComponent,
+    CreateNewComponent,
   ],
   imports: [
-    // AngularFireModule.initializeApp(firebaseConfig),
-    // AngularFirestoreModule,
     BrowserModule,
     BrowserAnimationsModule,
     MatToolbarModule,

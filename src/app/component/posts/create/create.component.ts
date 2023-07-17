@@ -5,6 +5,7 @@ import { Post } from "../../../model/post";
 import {PostService} from "../../../service/post.service";
 import {ActivatedRoute} from "@angular/router";
 import { Validators } from '@angular/forms';
+import { FirebaseService } from '../../../service/firebase.service';
 
 @Component({
   selector: 'app-create',
@@ -21,7 +22,7 @@ export class CreateComponent {
   creating = true;
   buttonName = 'Create'
 
-  constructor(private postService: PostService, private snackBar: MatSnackBar, actualRoute: ActivatedRoute) {
+  constructor(private postService: FirebaseService, private snackBar: MatSnackBar, actualRoute: ActivatedRoute) {
     this.post = new Post();
     this.posts = [];
 
@@ -64,16 +65,16 @@ export class CreateComponent {
     }
   }
 
-  // createNewPost() {
-  //   this.postService.insert(this.post).subscribe(
-  //     resp => {
-  //       this.posts.push(this.post);
-  //       this.post = new Post();
-  //       this.snackBar.open('Conta criada com sucesso!✅', 'Fechar', {
-  //         duration: 3000,
-  //       });
-  //     }
-  //   )
-  // }
+  createNewPost() {
+    this.postService.insert(this.post).subscribe(
+      resp => {
+        this.posts.push(this.post);
+        this.post = new Post();
+        this.snackBar.open('Conta criada com sucesso!✅', 'Fechar', {
+          duration: 3000,
+        });
+      }
+    )
+  }
 
 }

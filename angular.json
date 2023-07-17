@@ -5,7 +5,9 @@
   "projects": {
     "gameoftheyear": {
       "projectType": "application",
-      "schematics": {},
+      "schematics": {
+        "spec": false
+      },
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",

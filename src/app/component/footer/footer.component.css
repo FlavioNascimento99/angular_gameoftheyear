@@ -1,0 +1,38 @@
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  height: 12vh;
+
+  background-color: #673AB7;
+  color: white;
+}
+
+.footer-left {
+  width: 50%;
+}
+.footer-divisor {
+  height: 85%;
+}
+
+.footer-right {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+
+  width: 50%;
+}
+
+
+/* Default Components */
+
+li {
+  list-style-type: none;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  margin-right: 2em;
+}

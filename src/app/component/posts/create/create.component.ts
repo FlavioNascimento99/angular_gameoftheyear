@@ -2,8 +2,9 @@ import { Component } from '@angular/core';
 import { MatSnackBar } from "@angular/material/snack-bar";
 
 import { Post } from "../../../model/post";
-import {PostService} from "../../../services/post.service";
+import {PostService} from "../../../service/post.service";
 import {ActivatedRoute} from "@angular/router";
+import { Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-create',
@@ -62,7 +63,6 @@ export class CreateComponent {
       )
     }
   }
-
 
   // createNewPost() {
   //   this.postService.insert(this.post).subscribe(

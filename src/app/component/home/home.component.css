@@ -25,10 +25,17 @@
     text-align: center;
   }
     .main-left-column-h1 {
+      font-family: Impact, serif;
+      display: flex;
+      text-align: left;
       font-size: 100px;
-      margin: 5%;
+      font-weight: lighter;
+      margin-top: 10%;
+      margin-bottom: 6%;
     }
     .main-left-column-sub {
+      display: flex;
+      text-align: left;
       font-size: 25px;
     }
 

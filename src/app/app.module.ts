@@ -6,12 +6,12 @@ import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { FormsModule } from "@angular/forms";
-import { PostsModule } from "./components/posts/posts.module";
-import { ListComponent } from './components/posts/feed/list.component';
-import { HomeComponent } from './components/home/home.component';
-import { CreateComponent } from './components/posts/create/create.component';
-import { HeaderComponent } from './components/shared/header/header.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { PostsModule } from "./component/posts/posts.module";
+import { ListComponent } from './component/posts/feed/list.component';
+import { HomeComponent } from './component/home/home.component';
+import { CreateComponent } from './component/posts/create/create.component';
+import { HeaderComponent } from './component/shared/header/header.component';
 
 import { MatMenuModule } from "@angular/material/menu";
 import { MatListModule } from "@angular/material/list";
@@ -23,6 +23,10 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatSelectModule } from "@angular/material/select";
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonToggleModule } from "@angular/material/button-toggle";
+import { FooterComponent } from './component/footer/footer.component';
+import { MatTooltipModule } from '@angular/material/tooltip';
+import { MatStepperModule } from '@angular/material/stepper';
+import { TesteComponent } from './component/teste/teste.component';
 
 // import {firebaseConfig} from "../firebase.config";
 // import {AngularFireModule} from "@angular/fire/compat";
@@ -35,27 +39,32 @@ import { MatButtonToggleModule } from "@angular/material/button-toggle";
     CreateComponent,
     HomeComponent,
     ListComponent,
+    FooterComponent,
+    TesteComponent,
   ],
-    imports: [
-        // AngularFireModule.initializeApp(firebaseConfig),
-        // AngularFirestoreModule,
-        BrowserModule,
-        BrowserAnimationsModule,
-        MatToolbarModule,
-        MatButtonModule,
-        MatIconModule,
-        MatCardModule,
-        MatInputModule,
-        MatSelectModule,
-        AppRoutingModule,
-        FormsModule,
-        MatListModule,
-        CommonModule,
-        PostsModule,
-        MatButtonToggleModule,
-        MatMenuModule,
-        MatBadgeModule
-    ],
+  imports: [
+    // AngularFireModule.initializeApp(firebaseConfig),
+    // AngularFirestoreModule,
+    BrowserModule,
+    BrowserAnimationsModule,
+    MatToolbarModule,
+    MatButtonModule,
+    MatIconModule,
+    MatCardModule,
+    MatInputModule,
+    MatSelectModule,
+    AppRoutingModule,
+    FormsModule,
+    MatListModule,
+    CommonModule,
+    PostsModule,
+    MatButtonToggleModule,
+    MatMenuModule,
+    MatBadgeModule,
+    MatTooltipModule,
+    MatStepperModule,
+    ReactiveFormsModule
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })
